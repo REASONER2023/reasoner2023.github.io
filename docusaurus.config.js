@@ -65,6 +65,24 @@ const config = {
         },
         items: [
           {
+            type: "doc",
+            docId: "dataset",
+            position: "left",
+            label: "Dataset",
+          },
+          {
+            type: "doc",
+            docId: "library",
+            position: "left",
+            label: "Library",
+          },
+          {
+            type: "doc",
+            docId: "about",
+            position: "left",
+            label: "About",
+          },
+          {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
             position: "right",
