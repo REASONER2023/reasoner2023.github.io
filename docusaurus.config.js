@@ -96,8 +96,16 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Dataset",
+                to: "/docs/dataset",
+              },
+              {
+                label: "Library",
+                to: "/docs/library",
+              },
+              {
+                label: "About",
+                to: "/docs/about",
               },
             ],
           },
@@ -121,10 +129,6 @@ const config = {
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
               {
                 label: "GitHub",
                 href: "https://github.com/REASONER2023/reasoner2023.github.io",
