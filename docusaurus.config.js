@@ -42,7 +42,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/REASONER2023/reasoner2023.github.io/tree/main",
         },
         blog: false,
         theme: {
@@ -83,7 +83,7 @@ const config = {
             label: "About",
           },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/REASONER2023/reasoner2023.github.io",
             label: "GitHub",
             position: "right",
           },
@@ -127,7 +127,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/REASONER2023/reasoner2023.github.io",
               },
             ],
           },
