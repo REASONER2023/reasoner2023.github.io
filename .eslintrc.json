@@ -1,7 +1,8 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@docusaurus/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
