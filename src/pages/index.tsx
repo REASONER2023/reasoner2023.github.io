@@ -10,22 +10,22 @@ import Translate from "@docusaurus/Translate";
 const features = [
   {
     title: "Multi-modal Explanations",
-    imageUrl: "img/explanations.png",
+    imageUrl: "img/explanation.svg",
     description: "Feature description",
   },
   {
     title: "Multi-aspect Explanation Ground Truth",
-    imageUrl: "img/truth.png",
+    imageUrl: "img/truth.svg",
     description: "Feature description",
   },
   {
     title: "Explanable toolkit",
-    imageUrl: "img/toolkit.png",
+    imageUrl: "img/toolkit.svg",
     description: "Feature description",
   },
   {
     title: "Three thousand Real User feedback",
-    imageUrl: "img/feedback.png",
+    imageUrl: "img/feedback.svg",
     description: "Feature description",
   },
 ];

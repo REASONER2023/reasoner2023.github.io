@@ -1,0 +1,55 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" height="100px" width="100px">
+    <title>编组 42</title>
+    <defs>
+        <linearGradient id="linearGradient-1" y2="263.535276%" x2="287.622893%" y1="-42.1481261%" x1="-53.3461971%">
+            <stop offset="0%" stop-color="#21BA96"></stop>
+            <stop offset="100%" stop-color="#21BA96"></stop>
+        </linearGradient>
+        <circle r="11.25" cy="11.25" cx="11.25" id="path-2"></circle>
+        <linearGradient id="linearGradient-4" y2="133.624583%" x2="135.233907%" y1="0%" x1="0%">
+            <stop offset="0%" stop-color="#21BA96"></stop>
+            <stop offset="100%" stop-color="#21BA96"></stop>
+        </linearGradient>
+        <linearGradient id="linearGradient-5" y2="92.3104175%" x2="140.00359%" y1="26.3671875%" x1="0%">
+            <stop offset="0%" stop-color="#33AFFF"></stop>
+            <stop offset="100%" stop-color="#33AFFF"></stop>
+        </linearGradient>
+    </defs>
+    <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="页面-1">
+        <g transform="translate(-910.000000, -1488.000000)" id="企业版">
+            <g transform="translate(910.000000, 1488.000000)" id="编组-123">
+                <rect height="100" width="100" y="0" x="0" id="矩形备份-49"></rect>
+                <rect height="62.5" width="42.5" y="20" x="28.75" fill="#C0D5FB" id="矩形备份-31"></rect>
+                <rect height="78" width="58" y="11" x="21" stroke-width="2" stroke="#333333" id="矩形"></rect>
+                <g fill="url(#linearGradient-1)" transform="translate(52.500000, 76.250000)" id="编组">
+                    <rect height="3.75" width="3.75" y="0" x="12.5" id="矩形"></rect>
+                    <rect height="3.75" width="3.75" y="0" x="6.25" id="矩形备份-50"></rect>
+                    <rect height="3.75" width="3.75" y="0" x="0" id="矩形备份-51"></rect>
+                </g>
+                <g transform="translate(38.750000, 30.000000)" id="编组-119">
+                    <mask fill="white" id="mask-3">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <use xlink:href="#path-2" fill="#FFFFFF" id="蒙版"></use>
+                    <g fill-rule="nonzero" fill="#C0D5FB" mask="url(#mask-3)" id="ren">
+                        <g id="形状" transform="translate(2.500000, 3.750000)">
+                            <path d="M8.85936593,11.2666653 C7.21873185,11.2666653 5.79687111,10.6166571 4.59374222,9.64165503 C1.85936593,11.0499959 0,15.391655 0,18.75 L17.5,18.75 C17.5,15.391655 15.6406341,11.1583203 13.0156237,9.64165503 C11.9218815,10.6166571 10.5,11.2666653 8.85936593,11.2666653 Z M8.75,9.96666941 C11.4843763,9.96666941 13.6718815,7.69167146 13.6718815,4.9833347 C13.6718815,2.27499795 11.4843763,0 8.75,0 C6.0156237,0 3.82811852,2.27499795 3.82811852,4.9833347 C3.82811852,7.79999589 6.12498963,9.96666941 8.75,9.96666941 Z"></path>
+                        </g>
+                    </g>
+                </g>
+                <circle r="15" cy="32.5" cx="80" fill="url(#linearGradient-4)" id="椭圆形"></circle>
+                <g transform="translate(5.000000, 57.500000)" id="编组-122">
+                    <rect height="27.5" width="40" y="0" x="0" fill="#21BA96" id="矩形"></rect>
+                    <g fill="#FFFFFF" transform="translate(7.500000, 6.250000)" id="编组-121">
+                        <rect height="3.75" width="25" y="0" x="0" id="矩形备份-39"></rect>
+                        <rect height="3.75" width="25" y="11.25" x="0" id="矩形备份-53"></rect>
+                    </g>
+                </g>
+                <g fill="#FFFFFF" transform="translate(71.250000, 23.750000)" id="编组-120">
+                    <rect height="3.75" width="17.5" y="6.875" x="0" id="矩形"></rect>
+                    <rect height="3.75" width="17.5" y="6.875" x="0" transform="translate(8.750000, 8.750000) rotate(-270.000000) translate(-8.750000, -8.750000)" id="矩形备份-52"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

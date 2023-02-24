@@ -1,0 +1,35 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" height="100px" width="100px">
+    <title>编组 45</title>
+    <defs>
+        <linearGradient id="linearGradient-1" y2="100%" x2="72.2222222%" y1="0%" x1="27.7777778%">
+            <stop offset="0%" stop-color="#33AFFF"></stop>
+            <stop offset="100%" stop-color="#405CFF"></stop>
+        </linearGradient>
+        <linearGradient id="linearGradient-2" y2="100%" x2="57.03125%" y1="0%" x1="42.96875%">
+            <stop offset="0%" stop-color="#33AFFF"></stop>
+            <stop offset="100%" stop-color="#405CFF"></stop>
+        </linearGradient>
+        <linearGradient id="linearGradient-3" y2="100%" x2="100%" y1="0%" x1="0%">
+            <stop offset="0%" stop-color="#33AFFF"></stop>
+            <stop offset="100%" stop-color="#405CFF"></stop>
+        </linearGradient>
+    </defs>
+    <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="页面-1">
+        <g transform="translate(-1320.000000, -1780.000000)" id="企业版">
+            <g transform="translate(1320.000000, 1780.000000)" id="编组-114">
+                <rect height="100" width="100" y="0" x="0" id="矩形备份-41"></rect>
+                <g transform="translate(5.000000, 15.000000)" id="编组-113">
+                    <rect height="15" width="15" y="46.25" x="7.5" fill="#C0D5FB" id="矩形备份-31"></rect>
+                    <rect height="22.5" width="15" y="38.75" x="27.5" fill="#21BA96" id="矩形备份-42"></rect>
+                    <rect height="30" width="15" y="31.25" x="47.5" fill="#C0D5FB" id="矩形备份-43"></rect>
+                    <rect height="40" width="15" y="21.25" x="67.5" fill="#21BA96" id="矩形备份-44"></rect>
+                    <rect height="68" width="88" y="1" x="1" stroke-width="2" stroke="#333333" id="矩形"></rect>
+                    <g transform="translate(6.250000, 6.250000)" id="编组-112">
+                        <path fill="#21BA96" id="路径" d="M9.375,18.75 C11.9638125,18.75 14.3075625,17.7006563 16.0041094,16.0041094 C17.7006563,14.3075625 18.75,11.9638125 18.75,9.375 C18.75,6.7861875 17.7006563,4.4424375 16.0041094,2.74587188 C14.3075625,1.04933437 11.9638125,0 9.375,0 C6.7861875,0 4.4424375,1.04933437 2.74587188,2.74587188 C1.04933437,4.4424375 0,6.7861875 0,9.375 C0,11.9638125 1.04933437,14.3075625 2.74587188,16.0041094 C4.4424375,17.7006563 6.7861875,18.75 9.375,18.75 Z"></path>
+                        <path fill="#FFFFFF" id="路径" d="M13.2338592,5.73385924 C13.6915049,5.27621359 14.4334951,5.27621359 14.8911408,5.73385924 C15.3135829,6.15630138 15.3460785,6.82102528 14.9886274,7.28074154 L14.8911408,7.39114076 L9.26614076,13.0161408 C8.84369862,13.4385829 8.17897472,13.4710785 7.71925846,13.1136274 L7.60885924,13.0161408 L4.79635924,10.2036408 C4.33871359,9.7459951 4.33871359,9.0040049 4.79635924,8.54635924 C5.21880138,8.1239171 5.88352528,8.09142155 6.34324154,8.44887259 L6.45364076,8.54635924 L8.4375,10.5292969 L13.2338592,5.73385924 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
