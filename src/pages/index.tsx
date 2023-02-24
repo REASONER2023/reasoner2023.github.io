@@ -11,22 +11,30 @@ const features = [
   {
     title: "Multi-modal Explanations",
     imageUrl: "img/explanation.svg",
-    description: "Feature description",
+    description:
+      "In our dataset, the users can select " +
+      "both textual and visual explanations according to their preferences for each video. ",
   },
   {
     title: "Multi-aspect Explanation Ground Truth",
     imageUrl: "img/truth.svg",
-    description: "Feature description",
+    description:
+      "In our dataset, we provide the explanation ground truths " +
+      "from the perspectives of persuasiveness, informativeness and satisfaction. ",
   },
   {
-    title: "Explanable toolkit",
+    title: "Real User Labled Dataset",
     imageUrl: "img/toolkit.svg",
-    description: "Feature description",
+    description:
+      "In our dataset, the ground truths annotators are " +
+      "exactly the people who produce the user-item interactions in the dataset. ",
   },
   {
-    title: "Three thousand Real User feedback",
+    title: "Comprehensive User Information",
     imageUrl: "img/feedback.svg",
-    description: "Feature description",
+    description:
+      "In our dataset, we have collected user profiles like the age, " +
+      "gender, income, hobby and physiology information.",
   },
 ];
 
