@@ -1,0 +1,28 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" height="100px" width="100px">
+    <title>编组 13</title>
+    <defs>
+        <linearGradient id="linearGradient-1" y2="100%" x2="100%" y1="0%" x1="0%">
+            <stop offset="0%" stop-color="#21BA96"></stop>
+            <stop offset="100%" stop-color="#21BA96"></stop>
+        </linearGradient>
+        <linearGradient id="linearGradient-2" y2="100%" x2="100%" y1="0%" x1="0%">
+            <stop offset="0%" stop-color="#21BA96"></stop>
+            <stop offset="100%" stop-color="#21BA96"></stop>
+        </linearGradient>
+    </defs>
+    <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="页面-1">
+        <g transform="translate(-1320.000000, -1469.000000)" id="消费版">
+            <g transform="translate(1320.000000, 1469.000000)" id="编组-15">
+                <rect height="100" width="100" y="0" x="0" id="矩形"></rect>
+                <path stroke-dasharray="5" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="#333333" id="椭圆形" d="M50,93.75 C74.1624578,93.75 93.75,74.1624578 93.75,50 C93.75,25.8375422 74.1624578,6.25 50,6.25 C25.8375422,6.25 6.25,25.8375422 6.25,50 C6.25,74.1624578 25.8375422,93.75 50,93.75 Z"></path>
+                <path transform="translate(50.000000, 50.000000) rotate(-2.000000) translate(-50.000000, -50.000000)" stroke-linecap="round" stroke-width="2" stroke="#333333" id="路径" d="M93.75,50 C93.75,25.8375422 74.1624578,6.25 50,6.25 C25.8375422,6.25 6.25,25.8375422 6.25,50 C6.25,74.1624578 25.8375422,93.75 50,93.75"></path>
+                <circle r="7.5" cy="81.25" cx="18.75" fill="url(#linearGradient-1)" id="椭圆形"></circle>
+                <circle r="7.5" cy="18.75" cx="81.25" fill="url(#linearGradient-2)" id="椭圆形备份-15"></circle>
+                <g transform="translate(26.250000, 26.250000)" id="编组-7">
+                    <circle r="23.75" cy="23.75" cx="23.75" fill="url(#linearGradient-2)" id="椭圆形"></circle>
+                    <path transform="translate(25.729167, 24.409722) rotate(-270.000000) translate(-25.729167, -24.409722)" fill="#FFFFFF" id="三角形" d="M26.728481,18.6184388 L34.3357899,29.7758253 C34.7120895,30.3277313 34.5697324,31.0801907 34.0178263,31.4564902 C33.8169895,31.5934244 33.5795525,31.6666667 33.3364756,31.6666667 L18.1218577,31.6666667 C17.4538744,31.6666667 16.912367,31.1251592 16.912367,30.4571759 C16.912367,30.214099 16.9856092,29.976662 17.1225434,29.7758253 L24.7298523,18.6184388 C25.1061519,18.0665327 25.8586113,17.9241755 26.4105173,18.3004751 C26.5354489,18.3856557 26.6433004,18.4935072 26.728481,18.6184388 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
