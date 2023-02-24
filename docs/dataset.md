@@ -144,23 +144,38 @@ category={
 
 ### 2. Statistics on the users
 
-![user](../static/img/dataset/user.png)
+<img
+src={require('../static/img/dataset/user.png').default}
+style={{width: '80%'}}
+/>
 
 ### 3. Statistics on the videos
 
-![video](../static/img/dataset/video.png)
+<img
+src={require('../static/img/dataset/video.png').default}
+style={{width: '80%'}}
+/>
 
 ### 4. Distribution of user-video and video-user interactions
 
-![user-video](../static/img/dataset/u_v.png)
+<img
+src={require('../static/img/dataset/u_v.png').default}
+style={{width: '80%'}}
+/>
 
 ### 4. Distribution of the user-tag interactions
 
-![user-tag](../static/img/dataset/user_tag.png)
+<img
+src={require('../static/img/dataset/user_tag.png').default}
+style={{width: '80%'}}
+/>
 
 ### 4. Distribution of the video-tag interactions
 
-![video-tag](../static/img/dataset/video_tag.png)
+<img
+src={require('../static/img/dataset/video_tag.png').default}
+style={{width: '80%'}}
+/>
 
 ### 5. The averaged Jaccard similarity for different explanation aspects
 
@@ -176,4 +191,7 @@ category={
 
 ### 7. Statistics on the user reviews
 
-![Image 6](../static/img/dataset/length.png)
+<img
+src={require('../static/img/dataset/length.png').default}
+style={{width: '80%'}}
+/>
