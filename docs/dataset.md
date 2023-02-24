@@ -24,32 +24,32 @@ Please provide us with your basic information including your name, institution, 
 
 ### 1. Descriptions of the fields in `interaction.csv`
 
-| Field Name: | Description | Type | Example |
-| :-- | :-- | :-- | :-- |
-| user_id | The ID of the user. | int64 | 0 |
-| video_id | The ID of the viewed video. | int64 | 3650 |
-| like | Whether user like the video. 0 means no, 1 means yes | int64 | 0 |
-| reason_tag | Tags representing why the user likes/dislikes the video. | list | [4728,2216,2523] |
-| rating | User rating for the video. | float64 | 3.0 |
-| review | User review for the video. | str | This animation is very interesting, my friends and I like it very much. |
-| video_tag | Tags that reflect the content of the video.<br/> | list | [2738,1216,2223] |
-| interest_tag | Tags that reflect user interests. | list | [738,3226,1323] |
-| watch_again | Show only the interest tags, will the video be viewed. 0 means no, 1 means yes | int64 | 0 |
+| Field Name:  | Description                                                                    | Type    | Example                                                                 |
+| :----------- | :----------------------------------------------------------------------------- | :------ | :---------------------------------------------------------------------- |
+| user_id      | The ID of the user.                                                            | int64   | 0                                                                       |
+| video_id     | The ID of the viewed video.                                                    | int64   | 3650                                                                    |
+| like         | Whether user like the video. 0 means no, 1 means yes                           | int64   | 0                                                                       |
+| reason_tag   | Tags representing why the user likes/dislikes the video.                       | list    | [4728,2216,2523]                                                        |
+| rating       | User rating for the video.                                                     | float64 | 3.0                                                                     |
+| review       | User review for the video.                                                     | str     | This animation is very interesting, my friends and I like it very much. |
+| video_tag    | Tags that reflect the content of the video.<br/>                               | list    | [2738,1216,2223]                                                        |
+| interest_tag | Tags that reflect user interests.                                              | list    | [738,3226,1323]                                                         |
+| watch_again  | Show only the interest tags, will the video be viewed. 0 means no, 1 means yes | int64   | 0                                                                       |
 
 Note that if the user chooses to like the video, the `watch_again` item has no meaning and is set to 0.
 
 ### 2. Descriptions of the fields in `user.csv`
 
-| Field Name: | Description | Type | Example |
-| :-- | :-- | :-- | :-- |
-| user_id | The ID of the user. | int64 | 1005 |
-| age | User age.The mapping between id and content is shown below. | int64 | 3 |
-| gender | User gender. 0 means female, 1 menas male. | int64 | 0 |
-| education | User education level. The mapping between id and content is shown below. | int64 | 3 |
-| career | User occupation. The mapping between id and content is shown below. | int64 | 20 |
-| income | User income. The mapping between id and content is shown below.<br/> | int64 | 3 |
-| address | User income. The mapping between id and content is shown below. | int64 | 23 |
-| hobby | User hobby. | str | drawing and soccer. |
+| Field Name: | Description                                                              | Type  | Example             |
+| :---------- | :----------------------------------------------------------------------- | :---- | :------------------ |
+| user_id     | The ID of the user.                                                      | int64 | 1005                |
+| age         | User age.The mapping between id and content is shown below.              | int64 | 3                   |
+| gender      | User gender. 0 means female, 1 menas male.                               | int64 | 0                   |
+| education   | User education level. The mapping between id and content is shown below. | int64 | 3                   |
+| career      | User occupation. The mapping between id and content is shown below.      | int64 | 20                  |
+| income      | User income. The mapping between id and content is shown below.<br/>     | int64 | 3                   |
+| address     | User income. The mapping between id and content is shown below.          | int64 | 23                  |
+| hobby       | User hobby.                                                              | str   | drawing and soccer. |
 
 The mappings between id and content are as below:
 
@@ -110,14 +110,14 @@ income={
 
 ### 3. Descriptions of the fields in `video.csv.`
 
-| Field Name: | Description | Type | Example |
-| :-- | :-- | :-- | :-- |
-| video_id | The ID of the video. | int64 | 1000 |
-| title | The title of the video. | str | 18 |
-| info | The introduction of the video. | str | 0 |
-| tags | The ID of the video tags. | list | [112,33,1233] |
-| duration | The duration of the video in seconds. | int64 | 120 |
-| category | The category of the video. The mapping between id and content is shown below.<br/> | int64 | 3 |
+| Field Name: | Description                                                                        | Type  | Example       |
+| :---------- | :--------------------------------------------------------------------------------- | :---- | :------------ |
+| video_id    | The ID of the video.                                                               | int64 | 1000          |
+| title       | The title of the video.                                                            | str   | 18            |
+| info        | The introduction of the video.                                                     | str   | 0             |
+| tags        | The ID of the video tags.                                                          | list  | [112,33,1233] |
+| duration    | The duration of the video in seconds.                                              | int64 | 120           |
+| category    | The category of the video. The mapping between id and content is shown below.<br/> | int64 | 3             |
 
 The mapping between categories and id is as follows:
 
@@ -138,9 +138,9 @@ category={
 
 ### 1. The basic statistics of _REASONER._
 
-|  | #Users | #Items | #Tag | #Interaction | #Tag-Interaction | Sparsity |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| _REASONER_ | 2,997 | 4,672 | 6,115 | 58,497 | 68,359 | 99.6% |
+|            | #Users | #Items | #Tag  | #Interaction | #Tag-Interaction | Sparsity |
+| :--------- | :----- | :----- | :---- | :----------- | :--------------- | :------- |
+| _REASONER_ | 2,997  | 4,672  | 6,115 | 58,497       | 68,359           | 99.6%    |
 
 ### 2. Statistics on the users
 
