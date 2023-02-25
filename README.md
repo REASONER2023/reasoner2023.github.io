@@ -199,7 +199,7 @@ python tag_prediction.py --model=[model name] --dataset=[dataset] --config=[conf
 ```
 
 
-## How to Obtain?
+## How to Obtain
 
 Please provide us with your basic information including your name, institution, and purpose of use to request the dataset and library. You can email us at reasonerdataset@gmail.com.
 
