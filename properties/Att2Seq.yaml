@@ -1,0 +1,33 @@
+# data params
+dataset: '3_core'
+vocab_size: 20000
+
+# model params
+model: 'Att2Seq'
+model_type: 'review_aware'
+embedding_size: 16
+hidden_size: 256
+nlayers: 2
+dropout_prob: 0.1
+
+# run params
+lr: 0.01
+learner: 'adam'
+weight_decay: 0
+epochs: 100
+batch_size: 256
+neg_sample_num: 0
+endure_times: 3
+train_type: 'nll'
+seq_max_len: 17
+max_rating: 5.0
+min_rating: 1.0
+clip: 1.0
+
+
+# general params
+seed: 1111
+cuda: True
+gpu_id: 0
+checkpoint: './att2seq'
+generated_file_path: '_att2seq_generated.txt'

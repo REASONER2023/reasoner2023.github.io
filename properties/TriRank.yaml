@@ -1,0 +1,28 @@
+# data params
+dataset: '3_core'
+
+# model params
+model: 'TriRank'
+model_type: 'tag_aware'
+embedding_size: 16
+
+# run params
+alpha: 4
+beta: 2
+gamma: 1
+alpha0: 0.5
+beta0: 2
+gamma0: 1
+maxIter: 30
+batch_size: 256
+top_k: 10
+neg_sample_num: 1
+endure_times: 3
+train_type: 'infer'
+candidate_num: 100
+
+# general params
+seed: 1111
+cuda: True
+gpu_id: 1
+checkpoint: './trirank'

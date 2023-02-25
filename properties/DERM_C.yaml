@@ -1,0 +1,33 @@
+# data params
+dataset: '3_core'
+
+# model params
+model: 'DERM_C'
+model_type: 'tag_aware'
+embedding_size_mf: 16
+embedding_size_mlp: 16
+mlp_hidden_size: [64]
+dropout_prob: 0.1
+
+# run params
+rating_weight: 1
+reason_weight: 0
+video_weight: 1
+interest_weight: 1
+l2_weight: 0.0001
+lr: 0.01
+learner: 'adam'
+weight_decay: 0
+epochs: 100
+batch_size: 256
+top_k: 10
+neg_sample_num: 1
+endure_times: 3
+train_type: 'bce'
+candidate_num: 100
+
+# general params
+seed: 1111
+cuda: True
+gpu_id: 2
+checkpoint: './derm_c'

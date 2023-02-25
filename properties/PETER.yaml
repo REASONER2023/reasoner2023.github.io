@@ -1,0 +1,39 @@
+# data params
+dataset: '3_core'
+vocab_size: 20000
+
+# model params
+model: 'PETER'
+model_type: 'review_aware'
+embedding_size: 16
+hidden_size: 32
+nlayers: 4
+dropout_prob: 0.1
+nhead: 2
+peter_mask: True
+
+# run params
+rating_weight: 1
+review_weight: 1
+context_weight: 1
+l2_weight: 0.0
+lr: 0.1
+learner: 'sgd'
+weight_decay: 0
+epochs: 100
+batch_size: 256
+neg_sample_num: 0
+endure_times: 3
+train_type: 'nll'
+seq_max_len: 17
+max_rating: 5.0
+min_rating: 1.0
+clip: 1.0
+
+
+# general params
+seed: 1111
+cuda: True
+gpu_id: 2
+checkpoint: './peter'
+generated_file_path: '_peter_generated.txt'

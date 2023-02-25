@@ -1,0 +1,36 @@
+# data params
+dataset: '3_core'
+vocab_size: 20000
+
+# model params
+model: 'NRT'
+model_type: 'review_aware'
+embedding_size: 16
+hidden_size: 32
+nlayers: 2
+dropout_prob: 0.1
+
+# run params
+rating_weight: 1
+review_weight: 1
+l2_weight: 0.0
+lr: 0.01
+learner: 'adam'
+weight_decay: 0
+epochs: 100
+batch_size: 256
+neg_sample_num: 0
+endure_times: 3
+train_type: 'nll'
+seq_max_len: 17
+max_rating: 5.0
+min_rating: 1.0
+clip: 1.0
+
+
+# general params
+seed: 1111
+cuda: True
+gpu_id: 1
+checkpoint: './nrt'
+generated_file_path: '_nrt_generated.txt'
