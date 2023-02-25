@@ -138,7 +138,7 @@ category={
 
 ## Library
 
-We developed a unified framework, which includes ten well-known explainable recommender models for rating prediction, tag prediction and review generation.
+We developed a unified framework, which includes ten well-known explainable recommender models for rating prediction, top-k recommendation and review generation.
 
 ![图片](asset/structure.png)
 The structure of our library is shown in the figure above. The configuration module is the base part of the library and responsible for initializing all the parameters. We support three methods to specify the parameters, that is, the commend line, parameter dictionary and configuration file. Based on the configuration module, there are four upper-layer modules:
@@ -202,3 +202,17 @@ python tag_prediction.py --model=[model name] --dataset=[dataset] --config=[conf
 ## How to Obtain?
 
 Please provide us with your basic information including your name, institution, and purpose of use to request the dataset and library. You can email us at reasonerdataset@gmail.com.
+
+## Acknowledgement
+
+Please cite the following paper as the reference if you use our code or dataset.
+
+```
+@inproceedings{,
+  title={},
+  author={},
+  booktitle={},
+  year={}
+}
+
+
