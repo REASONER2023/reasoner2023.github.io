@@ -39,7 +39,7 @@ You can access our library through [GitHub](https://github.com/REASONER2023/reas
 
 ## Framework
 
-<div align=center>
+<div style={{textAlign: 'center'}}>
 <img
 src={require('../static/img/library/structure.png').default}
 style={{width: '80%'}}

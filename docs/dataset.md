@@ -74,7 +74,7 @@ We have collected the basic information of the REASONER dataset and listed it in
 
 ### 2. Statistics on the users
 
-<div align=center>
+<div style={{textAlign: 'center'}}>
 <img
 src={require('../static/img/dataset/user.png').default}
 style={{width: '80%'}}
@@ -83,7 +83,7 @@ style={{width: '80%'}}
 
 ### 3. Statistics on the videos
 
-<div align=center>
+<div style={{textAlign: 'center'}}>
 <img
 src={require('../static/img/dataset/video.png').default}
 style={{width: '80%'}}
