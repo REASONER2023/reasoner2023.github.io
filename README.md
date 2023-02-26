@@ -115,17 +115,17 @@ We implement several well-known explainable recommender models and list them acc
 
 ### Quick start
 
-Here is a quick-start example for our library. You can directly execute _tag_prediction.py_ or _review_generate.py_ to run a feature-based or review-based model, respectively. In each of these commends, you need to specify three parameters to indicate the names of the model, dataset and configuration file, respectively.
+Here is a quick-start example for our library. You can directly execute _tag_predict.py_ or _review_generate.py_ to run a feature based or natural language based model, respectively. In each of these commends, you need to specify three parameters to indicate the names of the model, dataset and configuration file, respectively.
 
 Run feature based models:
 ```bash
-python tag_prediction.py --model=[model name] --dataset=[dataset] --config=[config_files]
+python tag_predict.py --model=[model name] --dataset=[dataset] --config=[config_files]
 ```
 
 Run natural language based models:
 
 ```bash
-python tag_prediction.py --model=[model name] --dataset=[dataset] --config=[config_files]
+python review_generate.py --model=[model name] --dataset=[dataset] --config=[config_files]
 ```
 
 ## How to Obtain?
