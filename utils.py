@@ -12,45 +12,6 @@ import importlib
 from data.dataloader import TagDataLoader, ReviewDataLoader
 
 
-def now_time():
-    return '[' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ']: '
-
-
-def get_local_time():
-    r"""Get current time
-
-    Returns:
-        str: current time
-    """
-    cur = datetime.datetime.now()
-    cur = cur.strftime('%b-%d-%Y_%H-%M-%S')
-    return cur
-
-
-def set_seed(seed):
-    r"""
-    set seed for random sampling.
-
-    """
-    random.seed(seed)
-    np.random.seed(seed)
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
-    torch.backends.cudnn.benchmark = False
-    torch.backends.cudnn.deterministic = True
-
-
-def ids2tokens(ids, word2idx, idx2word):  # tranform ids to token_seq(sentence)
-    eos = word2idx['<eos>']
-    tokens = []
-    for i in ids:
-        if i == eos:
-            break
-        tokens.append(idx2word[i])
-    return tokens
-
-
 def get_model(model_name):
     r"""Automatically select model class based on model name
 
@@ -118,3 +79,42 @@ def get_batchify(model_type, model_name, train_type, procedure):
                     return getattr(importlib.import_module('data'), 'NegSamplingBatchify')
                 else:
                     return getattr(importlib.import_module('data'), 'Batchify')
+                
+                
+def now_time():
+    return '[' + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') + ']: '
+
+
+def get_local_time():
+    r"""Get current time
+
+    Returns:
+        str: current time
+    """
+    cur = datetime.datetime.now()
+    cur = cur.strftime('%b-%d-%Y_%H-%M-%S')
+    return cur
+
+
+def set_seed(seed):
+    r"""
+    set seed for random sampling.
+
+    """
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+
+
+def ids2tokens(ids, word2idx, idx2word):  # tranform ids to token_seq(sentence)
+    eos = word2idx['<eos>']
+    tokens = []
+    for i in ids:
+        if i == eos:
+            break
+        tokens.append(idx2word[i])
+    return tokens
