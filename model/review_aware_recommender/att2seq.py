@@ -6,8 +6,10 @@
 r"""
 Att2Seq
 ################################################
-Reference:
+Paper Reference:
     Li Dong et al, "Learning to Generate Product Reviews from Attributes." in ACL 2017.
+Code Reference:
+    https://github.com/lileipisces/NLG4RS
 """
 
 import torch
