@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+# @Time   : 2023/02/03
+# @Author : Jingsen Zhang
+# @Email  : zhangjingsen@ruc.edu.cn
+
+r"""
+Code Reference:
+    https://github.com/RUCAIBox/RecBole
+"""
+
 import re
 import sys
 import yaml
