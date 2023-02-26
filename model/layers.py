@@ -3,6 +3,11 @@
 # @Author : Jingsen Zhang
 # @Email  : zhangjingsen@ruc.edu.cn
 
+r"""
+Code Reference:
+    https://github.com/RUCAIBox/RecBole
+"""
+
 import torch
 import torch.nn as nn
 
