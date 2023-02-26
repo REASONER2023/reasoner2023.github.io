@@ -6,7 +6,6 @@ title: Dataset
 
 REASONER is an explainable recommendation dataset. It contains the ground truths for multiple explanation purposes, for example, enhancing the recommendation persuasiveness, informativeness and so on. In this dataset, the ground truth annotators are exactly the people who produce the user-item interactions, and they can make selections from the explanation candidates with multi-modalities. This dataset can be widely used for explainable recommendation, unbiased recommendation, psychology-informed recommendation and so on.
 
-
 ## How to Obtain the Dataset
 
 Please provide us with your basic information including your name, institution, and purpose of use to request the dataset. You can email us at reasonerdataset@gmail.com.
@@ -45,7 +44,7 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 | :---------- | :----------------------------------------- | :---- | :------------------ |
 | user_id     | ID of the user.                            | int64 | 1005                |
 | age         | User age (indicated by ID).                | int64 | 3                   |
-| gender      | User gender. 0 means female, 1 menas male. | int64 | 0                   |
+| gender      | User gender. 0 means female, 1 means male. | int64 | 0                   |
 | education   | User education level (indicated by ID).    | int64 | 3                   |
 | career      | User occupation (indicated by ID).         | int64 | 20                  |
 | income      | User income (indicated by ID).             | int64 | 3                   |
@@ -59,30 +58,34 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 | video_id    | ID of the video.                         | int64 | 1                                         |
 | title       | Title of the video.                      | str   | Take it once a day to prevent depression. |
 | info        | Introduction of the video.               | str   | Just like it, once a day                  |
-| tags        | ID of the video tags.                    | list  | [112,33,1233]                             |
+| tags        | ID of the video tags.                    | list  | [112, 33,1233]                             |
 | duration    | Duration of the video in seconds.        | int64 | 120                                       |
 | category    | Category of the video (indicated by ID). | int64 | 3                                         |
 
-
 ## Statistics
 
-### 1. The basic statistics of REASONER.
+### 1. The basic statistics of REASONER
+
 We have collected the basic information of the REASONER dataset and listed it in the table below. "u-v" represents the number of interactions between users and videos, "u-t" represents the number of tags clicked by users, and "Q1, Q2, Q3" respectively represent the persuasiveness, informativeness, and satisfaction of the tags.
+
 | #User | #Video | #Tag  | #u-v   | #u-t (Q1) | #u-t (Q2) | #u-t (Q3) |
 | ----- | ------ | ----- | ------ | --------- | --------- | --------- |
 | 2,997 | 4,672  | 6,115 | 58,497 | 263,885   | 271,456   | 256,079   |
 
 ### 2. Statistics on the users
 
+<div align=center>
 <img
 src={require('../static/img/dataset/user.png').default}
 style={{width: '80%'}}
 />
+</div>
 
 ### 3. Statistics on the videos
 
+<div align=center>
 <img
 src={require('../static/img/dataset/video.png').default}
 style={{width: '80%'}}
 />
-
+</div>
