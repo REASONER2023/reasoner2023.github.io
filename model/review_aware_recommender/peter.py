@@ -6,8 +6,10 @@
 r"""
 PETER
 ################################################
-Reference:
+Paper Reference:
     Lei Li et al. "Personalized Transformer for Explainable Recommendation." in ACL 2021.
+Code Reference:
+    https://github.com/lileipisces/NLG4RS
 """
 
 import math
