@@ -23,7 +23,7 @@ const features = [
       "from the perspectives of persuasiveness, informativeness and satisfaction. ",
   },
   {
-    title: "Real User Labled Dataset",
+    title: "Real User Labeled Dataset",
     imageUrl: "img/toolkit.svg",
     description:
       "In our dataset, the ground truths annotators are " +
