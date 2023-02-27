@@ -39,10 +39,6 @@ const config = {
       ({
         docs: {
           sidebarPath: false,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/REASONER2023/reasoner2023.github.io/tree/main",
         },
         blog: false,
         theme: {
