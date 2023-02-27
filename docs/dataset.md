@@ -4,7 +4,7 @@ title: Dataset
 
 ## Introduction
 
-REASONER is an explainable recommendation dataset. It contains the ground truths for multiple explanation purposes, for example, enhancing the recommendation persuasiveness, informativeness and so on. In this dataset, the ground truth annotators are exactly the people who produce the user-item interactions, and they can make selections from the explanation candidates with multi-modalities. This dataset can be widely used for explainable recommendation, unbiased recommendation, psychology-informed recommendation and so on.
+REASONER is an explainable recommendation dataset. It contains the ground truths for multiple explanation purposes, for example, enhancing the recommendation persuasiveness, informativeness and so on. In this dataset, the ground truth annotators are exactly the people who produce the user-item interactions, and they can make selections from the explanation candidates with multi-modalities. This dataset can be widely used for explainable recommendation, unbiased recommendation, psychology-informed recommendation and so on. Please see our 
 
 ## How to Obtain the Dataset
 
@@ -12,7 +12,7 @@ Please provide us with your basic information including your name, institution, 
 
 ## Data description
 
-*REASONER* contains fifty thousand of user-item interactions as well as the side information including the video categories and user profile. Three files are included in the download data:
+*REASONER* contains fifty thousand of user-item interactions as well as the side information including the video categories and user profile. Three files are included in the dataset:
 
 ```plain
  REASONER
