@@ -52,7 +52,7 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 | address     | User address (indicated by ID)            | int64 | 23                  |
 | hobby       | User hobbies                              | str   | drawing and soccer. |
 
-### 3. Descriptions of the fields in `video.csv.`
+### 3. Descriptions of the fields in `video.csv`
 
 | Field Name: | Description                             | Type  | Example                                   |
 | :---------- | :-------------------------------------- | :---- | :---------------------------------------- |
@@ -63,7 +63,7 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 | duration    | Duration of the video in seconds        | int64 | 120                                       |
 | category    | Category of the video (indicated by ID) | int64 | 3                                         |
 
-### 4. Descriptions of the fields in `bigfive.csv.`
+### 4. Descriptions of the fields in `bigfive.csv`
 
 We have the annotators take the Big Five Personality Test, and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. The file also includes a user_id column.
 
