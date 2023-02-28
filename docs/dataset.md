@@ -34,7 +34,7 @@ Please provide us with your basic information including your name, institution, 
 | rating              | User rating for the video                                                          | float64 | 3.0                                                                     |
 | review              | User review for the video                                                          | str     | This animation is very interesting, my friends and I like it very much. |
 | informativeness_tag | Tags that reflect the content of the video                                         | list    | [2738,1216,2223]                                                        |
-| satification_tag    | Tags that reflect user interests                                                   | list    | [738,3226,1323]                                                         |
+| satisfaction_tag    | Tags that reflect user interests                                                   | list    | [738,3226,1323]                                                         |
 | watch_again         | Show only the satification tags, will the video be viewed: 0 means no, 1 means yes | int64   | 0                                                                       |
 
 Note that if the user chooses to like the video, the `watch_again` item has no meaning and is set to 0.
