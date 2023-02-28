@@ -22,21 +22,22 @@ In specific, we firstly develop a video recommendation platform, where a series 
   │   ├── interaction.csv
   │   ├── user.csv
   │   ├── video.csv
+  │   ├── bigfive.csv 
 ```
 
 ### 1. Descriptions of the fields in `interaction.csv`
 
 | Field Name:  | Description                                                                    | Type    | Example                                                                 |
 | :----------- | :----------------------------------------------------------------------------- | :------ | :---------------------------------------------------------------------- |
-| user_id      | ID of the user.                                                                | int64   | 0                                                                       |
-| video_id     | ID of the viewed video.                                                        | int64   | 3650                                                                    |
-| like         | Whether user like the video. 0 means no, 1 means yes                           | int64   | 0                                                                       |
-| reason_tag   | Tags that reflect why the user likes/dislikes the video.                       | list    | [4728,2216,2523]                                                        |
-| rating       | User rating for the video.                                                     | float64 | 3.0                                                                     |
-| review       | User review for the video.                                                     | str     | This animation is very interesting, my friends and I like it very much. |
-| video_tag    | Tags that reflect the content of the video.<br/>                               | list    | [2738,1216,2223]                                                        |
-| interest_tag | Tags that reflect user interests.                                              | list    | [738,3226,1323]                                                         |
-| watch_again  | Show only the interest tags, will the video be viewed. 0 means no, 1 means yes | int64   | 0                                                                       |
+| user_id      | ID of the user                                                                | int64   | 0                                                                       |
+| video_id     | ID of the viewed video                                                        | int64   | 3650                                                                    |
+| like         | Whether user like the video: 0 means no, 1 means yes                           | int64   | 0                                                                       |
+| persuasiveness_tag   | Tags that reflect why the user likes/dislikes the video                       | list    | [4728,2216,2523]                                                        |
+| rating       | User rating for the video                                                     | float64 | 3.0                                                                     |
+| review       | User review for the video                                                     | str     | This animation is very interesting, my friends and I like it very much. |
+| informativeness_tag    | Tags that reflect the content of the video                             | list    | [2738,1216,2223]                                                        |
+| satification_tag | Tags that reflect user interests                                              | list    | [738,3226,1323]                                                         |
+| watch_again  | Show only the satification tags, will the video be viewed: 0 means no, 1 means yes | int64   | 0                                                                       |
 
 Note that if the user chooses to like the video, the `watch_again` item has no meaning and is set to 0.
 
@@ -44,26 +45,29 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 
 | Field Name: | Description                                | Type  | Example             |
 | :---------- | :----------------------------------------- | :---- | :------------------ |
-| user_id     | ID of the user.                            | int64 | 1005                |
-| age         | User age (indicated by ID).                | int64 | 3                   |
-| gender      | User gender. 0 means female, 1 means male. | int64 | 0                   |
-| education   | User education level (indicated by ID).    | int64 | 3                   |
-| career      | User occupation (indicated by ID).         | int64 | 20                  |
-| income      | User income (indicated by ID).             | int64 | 3                   |
-| address     | User address (indicated by ID).            | int64 | 23                  |
-| hobby       | User hobbies.                              | str   | drawing and soccer. |
+| user_id     | ID of the user                            | int64 | 1005                |
+| age         | User age (indicated by ID)                | int64 | 3                   |
+| gender      | User gender: 0 means female, 1 means male | int64 | 0                   |
+| education   | User education level (indicated by ID)    | int64 | 3                   |
+| career      | User occupation (indicated by ID)         | int64 | 20                  |
+| income      | User income (indicated by ID)             | int64 | 3                   |
+| address     | User address (indicated by ID)            | int64 | 23                  |
+| hobby       | User hobbies                              | str   | drawing and soccer. |
 
-### 3. Descriptions of the fields in `video.csv.`
+### 3. Descriptions of the fields in `video.csv`
 
 | Field Name: | Description                              | Type  | Example                                   |
 | :---------- | :--------------------------------------- | :---- | :---------------------------------------- |
-| video_id    | ID of the video.                         | int64 | 1                                         |
-| title       | Title of the video.                      | str   | Take it once a day to prevent depression. |
-| info        | Introduction of the video.               | str   | Just like it, once a day                  |
-| tags        | ID of the video tags.                    | list  | [112,33,1233]                             |
-| duration    | Duration of the video in seconds.        | int64 | 120                                       |
-| category    | Category of the video (indicated by ID). | int64 | 3                                         |
+| video_id    | ID of the video                         | int64 | 1                                         |
+| title       | Title of the video                      | str   | Take it once a day to prevent depression. |
+| info        | Introduction of the video               | str   | Just like it, once a day                  |
+| tags        | ID of the video tags                    | list  | [112,33,1233]                             |
+| duration    | Duration of the video in seconds        | int64 | 120                                       |
+| category    | Category of the video (indicated by ID) | int64 | 3                                         |
 
+### 4. Descriptions of the fields in `bigfive.csv`
+
+We have the annotators take the Big Five Personality Test, and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. The file also includes a user_id column.
 
 ## Library
 
