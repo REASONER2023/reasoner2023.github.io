@@ -32,12 +32,12 @@ In specific, we firstly develop a video recommendation platform, where a series 
 | user_id      | ID of the user                                                                | int64   | 0                                                                       |
 | video_id     | ID of the viewed video                                                        | int64   | 3650                                                                    |
 | like         | Whether user like the video: 0 means no, 1 means yes                           | int64   | 0                                                                       |
-| persuasiveness_tag   | Tags that reflect why the user likes/dislikes the video                       | list    | [4728,2216,2523]                                                        |
+| persuasiveness_tag   |The user selected tags for the question "Which tags are the reasons that you would like to watch this video?" before watching the video                        | list    | [4728,2216,2523]                                                        |
 | rating       | User rating for the video                                                     | float64 | 3.0                                                                     |
 | review       | User review for the video                                                     | str     | This animation is very interesting, my friends and I like it very much. |
-| informativeness_tag    | Tags that reflect the content of the video                             | list    | [2738,1216,2223]                                                        |
-| satisfaction_tag | Tags that reflect user interests                                              | list    | [738,3226,1323]                                                         |
-| watch_again  | Show only the satification tags, will the video be viewed: 0 means no, 1 means yes | int64   | 0                                                                       |
+| informativeness_tag    | The user selected tags for the question "Which features are most informative for this video?" after watching the video                             | list    | [2738,1216,2223]                                                        |
+| satisfaction_tag | The user selected tags for the question "Which features are you most satisfied with?" after watching the video.                                              | list    | [738,3226,1323]                                                         |
+| watch_again  |  If the system only show the satisfaction_tag to the user, whether the she would like to watch this video? | int64   | 0                                                                       |
 
 Note that if the user chooses to like the video, the `watch_again` item has no meaning and is set to 0.
 
@@ -67,7 +67,7 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 
 ### 4. Descriptions of the fields in `bigfive.csv`
 
-We have the annotators take the Big Five Personality Test, and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. The file also includes a user_id column.
+We have the annotators take the [Big Five Personality Test](https://www.psytoolkit.org/survey-library/big5-bfi-s.html), and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. The file also includes a user_id column.
 
 ## Library
 
@@ -79,10 +79,9 @@ The structure of our library is shown in the figure above. The configuration mod
 - **Data module**. This module aims to convert the raw data into the model inputs. There are two components: the first one is responsible for loading the data and building vocabularies for the user reviews. The second part aims to process the data into the formats required by the model inputs, and generate the sample batches for model optimization.
 - **Model module**. This module aims to implement the explainable recommender models. There are two types of methods in our library. The first one includes the feature-based explainable recommender models, and the second one contains the models with natural language explanations. We delay the detailed introduction of these models in the next section.
 - **Trainer module**. This module is leveraged to implement the training losses, such as the Bayesian Personalized Ranking (BPR) and Binary Cross Entropy (BCE). In addition, this module can also record the complete model training process.
-- **Evaluation module**. This module is designed to evaluate different models, and there are three types of evaluation tasks, that is, rating prediction, top-k recommendation and review generation. 
+- **Evaluation module**. This module is designed to evaluate different models, and there are three types of evaluation tasks, that is, rating prediction, top-k recommendation and review generation.
 
 Upon the above four modules, there is an execution module to run different recommendation tasks.
-
 
 ### Requirements
 
@@ -97,33 +96,34 @@ We implement several well-known explainable recommender models and list them acc
 
 **Feature based models**:
 
-* **[EFM](model/tag_aware_recommender/efm.py)** from Yongfeng Zhang *et al.*: [Explicit Factor Models for Explainable Recommendation based on Phrase-level Sentiment Analysis](https://www.cs.cmu.edu/~glai1/papers/yongfeng-guokun-sigir14.pdf) (SIGIR 2014).
+- **[EFM](model/tag_aware_recommender/efm.py)** from Yongfeng Zhang *et al.*: [Explicit Factor Models for Explainable Recommendation based on Phrase-level Sentiment Analysis](https://www.cs.cmu.edu/~glai1/papers/yongfeng-guokun-sigir14.pdf) (SIGIR 2014).
 
-* **[TriRank](model/tag_aware_recommender/trirank.py)** from Xiangnan He *et al.*: [TriRank: Review-aware Explainable Recommendation by Modeling Aspects](https://wing.comp.nus.edu.sg/wp-content/uploads/Publications/PDF/TriRank-%20Review-aware%20Explainable%20Recommendation%20by%20Modeling%20Aspects.pdf) (CIKM 2015).
+- **[TriRank](model/tag_aware_recommender/trirank.py)** from Xiangnan He *et al.*: [TriRank: Review-aware Explainable Recommendation by Modeling Aspects](https://wing.comp.nus.edu.sg/wp-content/uploads/Publications/PDF/TriRank-%20Review-aware%20Explainable%20Recommendation%20by%20Modeling%20Aspects.pdf) (CIKM 2015).
 
-* **[LRPPM](model/tag_aware_recommender/lrppm.py)** from Xu Chen *et al.*: [Learning to Rank Features for Recommendation over Multiple Categories](http://yongfeng.me/attach/sigir16-chen.pdf) (SIGIR 2016).
+- **[LRPPM](model/tag_aware_recommender/lrppm.py)** from Xu Chen *et al.*: [Learning to Rank Features for Recommendation over Multiple Categories](http://yongfeng.me/attach/sigir16-chen.pdf) (SIGIR 2016).
 
-* **[SULM](model/tag_aware_recommender/sulm.py)** from Konstantin Bauman *et al.*: [Aspect Based Recommendations: Recommending Items with the Most Valuable Aspects Based on User Reviews.](https://www.researchgate.net/profile/Konstantin-Bauman/publication/318915371_Aspect_Based_Recommendations_Recommending_Items_with_the_Most_Valuable_Aspects_Based_on_User_Reviews/links/5f06007e92851c52d620bc9f/Aspect-Based-Recommendations-Recommending-Items-with-the-Most-Valuable-Aspects-Based-on-User-Reviews.pdf) (KDD 2017).
+- **[SULM](model/tag_aware_recommender/sulm.py)** from Konstantin Bauman *et al.*: [Aspect Based Recommendations: Recommending Items with the Most Valuable Aspects Based on User Reviews.](https://www.researchgate.net/profile/Konstantin-Bauman/publication/318915371_Aspect_Based_Recommendations_Recommending_Items_with_the_Most_Valuable_Aspects_Based_on_User_Reviews/links/5f06007e92851c52d620bc9f/Aspect-Based-Recommendations-Recommending-Items-with-the-Most-Valuable-Aspects-Based-on-User-Reviews.pdf) (KDD 2017).
 
-* **[MTER](model/tag_aware_recommender/mter.py)** from Nan Wang *et al.*: [Explainable Recommendation via Multi-Task Learning in Opinionated Text Data](https://dl.acm.org/doi/pdf/10.1145/3209978.3210010) (SIGIR 2018).
+- **[MTER](model/tag_aware_recommender/mter.py)** from Nan Wang *et al.*: [Explainable Recommendation via Multi-Task Learning in Opinionated Text Data](https://dl.acm.org/doi/pdf/10.1145/3209978.3210010) (SIGIR 2018).
 
-* **[AMF](model/tag_aware_recommender/amf.py)** from Yunfeng Hou *et al.*: [Explainable recommendation with fusion of aspect information](https://yneversky.github.io/Papers/Hou2019_Article_ExplainableRecommendationWithF.pdf) (WWW 2019).
+- **[AMF](model/tag_aware_recommender/amf.py)** from Yunfeng Hou *et al.*: [Explainable recommendation with fusion of aspect information](https://yneversky.github.io/Papers/Hou2019_Article_ExplainableRecommendationWithF.pdf) (WWW 2019).
 
-* In addition to the above shallow models based on matrix factorization, we also implement the following deep feature-based explainable recommender models (called DERM for short).
+- In addition to the above shallow models based on matrix factorization, we also implement the following deep feature-based explainable recommender models (called DERM for short).
 
 **Natural Language based models**:
 
-* **[Att2Seq](model/review_aware_recommender/att2seq.py)** from Li Dong *et al.*: [Learning to Generate Product Reviews from Attributes](https://aclanthology.org/E17-1059.pdf) (ACL 2017).
+- **[Att2Seq](model/review_aware_recommender/att2seq.py)** from Li Dong *et al.*: [Learning to Generate Product Reviews from Attributes](https://aclanthology.org/E17-1059.pdf) (ACL 2017).
 
-* **[NRT](model/review_aware_recommender/nrt.py)** from Piji Li *et al.*: [Neural Rating Regression with Abstractive Tips Generation for Recommendation](https://arxiv.org/pdf/1708.00154.pdf) (SIGIR 2017).
+- **[NRT](model/review_aware_recommender/nrt.py)** from Piji Li *et al.*: [Neural Rating Regression with Abstractive Tips Generation for Recommendation](https://arxiv.org/pdf/1708.00154.pdf) (SIGIR 2017).
 
-* **[PETER](model/review_aware_recommender/peter.py)** from Lei Li *et al.*: [Personalized Transformer for Explainable Recommendation](https://arxiv.org/pdf/2105.11601.pdf) (ACL 2021).
+- **[PETER](model/review_aware_recommender/peter.py)** from Lei Li *et al.*: [Personalized Transformer for Explainable Recommendation](https://arxiv.org/pdf/2105.11601.pdf) (ACL 2021).
 
 ### Quick start
 
-Here is a quick-start example for our library. You can directly execute _tag_predict.py_ or _review_generate.py_ to run a feature based or natural language based model, respectively. In each of these commends, you need to specify three parameters to indicate the names of the model, dataset and configuration file, respectively.
+Here is a quick-start example for our library. You can directly execute *tag_predict.py* or *review_generate.py* to run a feature based or natural language based model, respectively. In each of these commends, you need to specify three parameters to indicate the names of the model, dataset and configuration file, respectively.
 
 Run feature based models:
+
 ```bash
 python tag_predict.py --model=[model name] --dataset=[dataset] --config=[config_files]
 ```
