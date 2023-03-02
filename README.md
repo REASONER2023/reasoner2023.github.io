@@ -1,12 +1,11 @@
 # REASONER: An Explainable Recommendation Dataset with Multi-aspect Real User Labeled Ground Truths
 
-[Homepage] | [Dataset] | [Library]
+[Homepage] | [Dataset] | [Library] | [Paper]
 
 [HomePage]: https://reasoner2023.github.io/
 [Dataset]: https://reasoner2023.github.io/docs/dataset
 [Library]: https://reasoner2023.github.io/docs/library
-
-<!-- [Paper]: https://arxiv.org/abs/2011.01731 -->
+[Paper]: https://arxiv.org/abs/2303.00168v1
 
 REASONER is an explainable recommendation dataset with multi-aspect real user labeled ground truths. The complete labeling process for each user is shown in following figure.
 ![steps](asset/steps.png)
