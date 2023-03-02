@@ -139,12 +139,13 @@ Please provide us with your basic information including your name, institution, 
 
 ## Cite
 
-Please cite the following paper as the reference if you use our code or dataset.
-
+Please cite the following paper as the reference if you use our code or dataset.[![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/2303.00168) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/2303.00168.pdf)
 ```
-@inproceedings{,
-  title={},
-  author={},
-  booktitle={},
-  year={}
+@misc{chen2023reasoner,
+      title={REASONER: An Explainable Recommendation Dataset with Multi-aspect Real User Labeled Ground Truths Towards more Measurable Explainable Recommendation}, 
+      author={Xu Chen and Jingsen Zhang and Lei Wang and Quanyu Dai and Zhenhua Dong and Ruiming Tang and Rui Zhang and Li Chen and Ji-Rong Wen},
+      year={2023},
+      eprint={2303.00168},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR}
 }
