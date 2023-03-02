@@ -71,15 +71,15 @@ const config = {
             label: "Library",
           },
           {
-            type: "doc",
-            docId: "about",
-            position: "left",
-            label: "About",
-          },
-          {
-            href: "https://arxiv.org/abs/2303.00168v1",
+            to: "https://arxiv.org/abs/2303.00168v1",
             position: "left",
             label: "Paper",
+          },
+          {
+            type: "doc",
+            docId: "about",
+            position: "right",
+            label: "About",
           },
           {
             href: "https://github.com/REASONER2023/reasoner2023.github.io",
