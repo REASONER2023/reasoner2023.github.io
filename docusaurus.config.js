@@ -77,7 +77,7 @@ const config = {
             label: "About",
           },
           {
-            href: "https://arxiv.org/abs/2106.00687",
+            href: "https://arxiv.org/abs/2303.00168v1",
             position: "left",
             label: "Paper",
           },
