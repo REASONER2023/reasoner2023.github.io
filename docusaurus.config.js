@@ -77,6 +77,11 @@ const config = {
             label: "About",
           },
           {
+            href: "https://arxiv.org/abs/2106.00687",
+            position: "left",
+            label: "Paper",
+          },
+          {
             href: "https://github.com/REASONER2023/reasoner2023.github.io",
             label: "GitHub",
             position: "right",
