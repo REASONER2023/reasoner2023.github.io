@@ -6,8 +6,7 @@
 r"""
 DERM_MF
 ################################################
-Reference:
-    Deep Explainable Recommender Model: A deep model uses matrix factorization for transition.
+We design a Deep Explainable Recommender Model using matrix factorization for transition.
 """
 
 import torch
