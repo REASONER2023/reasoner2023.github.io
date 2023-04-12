@@ -9,7 +9,7 @@ NRT
 Paper Reference:
     Piji Li et al. "Neural Rating Regression with Abstractive Tips Generation for Recommendation." in SIGIR 2017.
 Code Reference:
-    https://github.com/lileipisces/NLG4RS
+    https://github.com/lileipisces/NRT
 """
 
 import copy
