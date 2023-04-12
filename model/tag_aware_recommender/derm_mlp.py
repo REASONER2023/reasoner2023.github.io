@@ -6,8 +6,7 @@
 r"""
 DERM_MLP
 ################################################
-Reference:
-    Deep Explainable Recommender Model: A deep model with user-item-tag embedding as inputs.
+We design a deep explainable recommender model using multi-layer perceptron with user-item-tag embedding as inputs.
 """
 
 import torch
