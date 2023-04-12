@@ -6,7 +6,7 @@
 r"""
 DERM_MLP
 ################################################
-We design a deep explainable recommender model using multi-layer perceptron with user-item-tag embedding as inputs.
+We design a Deep Explainable Recommender Model using multi-layer perceptron with user-item-tag embedding as inputs.
 """
 
 import torch
