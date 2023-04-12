@@ -6,8 +6,7 @@
 r"""
 DERM_H
 ################################################
-Reference:
-    Deep Explainable Recommender Model: A deep method models user/item representations using history selected tags.
+We design a Deep Explainable Recommender Model, which models user/item representations using history selected tags.
 """
 
 import torch
