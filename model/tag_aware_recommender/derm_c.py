@@ -6,8 +6,7 @@
 r"""
 DERM_C
 ################################################
-Reference:
-    Deep Explainable Recommender Model: Combining deep neural network with matrix factorization.
+We design a Deep Explainable Recommender Model, which combines deep neural network with matrix factorization.
 """
 
 import torch
