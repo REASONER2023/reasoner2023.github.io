@@ -16,12 +16,15 @@ In specific, we firstly develop a video recommendation platform, where a series 
 *REASONER* contains fifty thousand of user-item interactions as well as the side information including the video categories and user profile. Three files are included in the download data:
 
 ```plain
- REASONER
-  ├── data
-  │   ├── interaction.csv
-  │   ├── user.csv
-  │   ├── video.csv
-  │   ├── bigfive.csv 
+ REASONER-Dataset
+  │── dataset
+  │   ├── interaction.csv
+  │   ├── user.csv
+  │   ├── video.csv
+  │   ├── bigfive.csv 
+  │   ├── tag_map.csv 
+  │   ├── video_map.csv 
+  │── preview
 ```
 
 ### 1. Descriptions of the fields in `interaction.csv`
@@ -68,6 +71,50 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 
 We have the annotators take the [Big Five Personality Test](https://www.psytoolkit.org/survey-library/big5-bfi-s.html), and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. The file also includes a user_id column.
 
+The questions are described as follows:
+
+| Question | Description                                                  |
+| :------- | :----------------------------------------------------------- |
+| Q1       | I think most people are basically well-intentioned           |
+| Q2       | I get bored with crowded parties                             |
+| Q3       | I'm a person who takes risks and breaks the rules            |
+| Q4       | i like adventure                                             |
+| Q5       | I try to avoid crowded parties and noisy environments        |
+| Q6       | I like to plan things out at the beginning                   |
+| Q7       | I worry about things that don't matter                       |
+| Q8       | I work or study hard                                         |
+| Q9       | Although there are some liars in the society, I think most people are still credible |
+| Q10      | I have a spirit of adventure that no one else has            |
+| Q11      | I often feel uneasy                                          |
+| Q12      | I'm always worried that something bad is going to happen     |
+| Q13      | Although there are some dark things in human society (such as war, crime, fraud), I still believe that human nature is generally good |
+| Q14      | I enjoy going to social and entertainment gatherings         |
+| Q15      | It is one of my characteristics to pay attention to logic and order in doing things |
+
+### 5.tag_map.csv
+
+Mapping relationship between the tag ID and the tag content. We add 7 additional tags that all videos contain, namely "preview 1, preview 2, preview 3, preview 4, preview 5, title, content".
+
+| Field Name:         | Description                                                  | Type    | Example                                                      |
+| :------------------ | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+| tag_id              | ID of the tag                                                | int64   | 1409                                                         |
+| tag_content         | The content corresponding to the tag                         | str     | cute baby
+
+### 6.video_map.csv
+
+Mapping relationship between the video ID and the folder name in *preview*.
+
+| Field Name:         | Description                                                  | Type    | Example                                                      |
+| :------------------ | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+| video_id            | ID of the video                                              | int64   | 1                                                            |
+| folder_name         | The folder name corresponding to the video                   | str     | 83062078
+
+### 7.preview
+
+Each video contains 5 image previews.
+
+The mapping relationship between the folder name and the video ID is in *video_map.csv*
+
 ## Library
 
 We developed a unified framework, which includes ten well-known explainable recommender models for rating prediction, tag prediction and review generation.
@@ -78,7 +125,7 @@ The structure of our library is shown in the figure above. The configuration mod
 - **Data module**. This module aims to convert the raw data into the model inputs. There are two components: the first one is responsible for loading the data and building vocabularies for the user reviews. The second part aims to process the data into the formats required by the model inputs, and generate the sample batches for model optimization.
 - **Model module**. This module aims to implement the explainable recommender models. There are two types of methods in our library. The first one includes the feature-based explainable recommender models, and the second one contains the models with natural language explanations. We delay the detailed introduction of these models in the next section.
 - **Trainer module**. This module is leveraged to implement the training losses, such as the Bayesian Personalized Ranking (BPR) and Binary Cross Entropy (BCE). In addition, this module can also record the complete model training process.
-- **Evaluation module**. This module is designed to evaluate different models, and there are three types of evaluation tasks, that is, rating prediction, top-k recommendation and review generation. 
+- **Evaluation module**. This module is designed to evaluate different models, and there are three types of evaluation tasks, that is, rating prediction, top-k recommendation and review generation.
 
 Upon the above four modules, there is an execution module to run different recommendation tasks.
 
@@ -119,9 +166,10 @@ We implement several well-known explainable recommender models and list them acc
 
 ### Quick start
 
-Here is a quick-start example for our library. You can directly execute _tag_predict.py_ or _review_generate.py_ to run a feature based or natural language based model, respectively. In each of these commends, you need to specify three parameters to indicate the names of the model, dataset and configuration file, respectively.
+Here is a quick-start example for our library. You can directly execute *tag_predict.py* or *review_generate.py* to run a feature based or natural language based model, respectively. In each of these commends, you need to specify three parameters to indicate the names of the model, dataset and configuration file, respectively.
 
 Run feature based models:
+
 ```bash
 python tag_predict.py --model=[model name] --dataset=[dataset] --config=[config_files]
 ```
@@ -134,11 +182,12 @@ python review_generate.py --model=[model name] --dataset=[dataset] --config=[con
 
 ## How to Obtain?
 
-Please provide us with your basic information including your name, institution, and purpose of use to request the dataset. You can email us at reasonerdataset@gmail.com.
+Please provide us with your basic information including your name, institution, and purpose of use to request the dataset. You can email us at <reasonerdataset@gmail.com>.
 
 ## Cite
 
 Please cite the following paper as the reference if you use our code or dataset.[![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/2303.00168) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/2303.00168.pdf)
+
 ```
 @misc{chen2023reasoner,
       title={REASONER: An Explainable Recommendation Dataset with Multi-aspect Real User Labeled Ground Truths Towards more Measurable Explainable Recommendation}, 
@@ -148,3 +197,4 @@ Please cite the following paper as the reference if you use our code or dataset.
       archivePrefix={arXiv},
       primaryClass={cs.IR}
 }
+```

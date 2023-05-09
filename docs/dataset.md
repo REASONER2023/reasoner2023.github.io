@@ -8,7 +8,7 @@ REASONER is an explainable recommendation dataset. It contains the ground truths
 
 ## How to Obtain the Dataset
 
-Please provide us with your basic information including your name, institution, and purpose of use to request the dataset. You can email us at reasonerdataset@gmail.com.
+You can obtain all the data in the REASONER from [Google Drive](https://drive.google.com/drive/folders/1dARhorIUu-ajc5ZsWiG_XY36slRX_wgL?usp=sharing).
 
 ## Data description
 
@@ -94,3 +94,24 @@ src={require('../static/img/dataset/video.png').default}
 style={{width: '80%'}}
 />
 </div>
+
+## Quick View
+
+We provide two ways to quickly view the data content and take the first ten lines of *interaction.csv* for example.
+
+### 1. Command Line
+
+````
+cd dataset
+head -n 10 interaction.csv 
+````
+
+### 2. Pandas
+
+````python
+import pandas as pd
+
+df = pd.read_csv('interaction.csv', sep='\t')
+print(df.head(10))
+````
+
