@@ -2,13 +2,13 @@
 
 [Homepage] | [Dataset] | [Library] | [Paper]
 
-[Homepage]: https://reasoner2023.github.io/
+[HomePage]: https://reasoner2023.github.io/
 [Dataset]: https://reasoner2023.github.io/docs/dataset
 [Library]: https://reasoner2023.github.io/docs/library
 [Paper]: https://arxiv.org/abs/2303.00168v1
 
 REASONER is an explainable recommendation dataset with multi-aspect real user labeled ground truths. The complete labeling process for each user is shown in following figure.
-![generation](asset/steps.png)
+![steps](asset/steps.png)
 In specific, we firstly develop a video recommendation platform, where a series of questions around the recommendation explainability are carefully designed. Then, we recruit about 3000 users with different backgrounds to use the system, and collect their behaviors and feedback to our questions.
 
 ## Data description
@@ -16,12 +16,15 @@ In specific, we firstly develop a video recommendation platform, where a series 
 *REASONER* contains fifty thousand of user-item interactions as well as the side information including the video categories and user profile. Three files are included in the download data:
 
 ```plain
- REASONER
-  ├── data
-  │   ├── interaction.csv
-  │   ├── user.csv
-  │   ├── video.csv
-  │   ├── bigfive.csv 
+ REASONER-Dataset
+  │── dataset
+  │   ├── interaction.csv
+  │   ├── user.csv
+  │   ├── video.csv
+  │   ├── bigfive.csv 
+  │   ├── tag_map.csv 
+  │   ├── video_map.csv 
+  │── preview
 ```
 
 ### 1. Descriptions of the fields in `interaction.csv`
@@ -67,6 +70,50 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 ### 4. Descriptions of the fields in `bigfive.csv`
 
 We have the annotators take the [Big Five Personality Test](https://www.psytoolkit.org/survey-library/big5-bfi-s.html), and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. The file also includes a user_id column.
+
+The questions are described as follows:
+
+| Question | Description                                                  |
+| :------- | :----------------------------------------------------------- |
+| Q1       | I think most people are basically well-intentioned           |
+| Q2       | I get bored with crowded parties                             |
+| Q3       | I'm a person who takes risks and breaks the rules            |
+| Q4       | i like adventure                                             |
+| Q5       | I try to avoid crowded parties and noisy environments        |
+| Q6       | I like to plan things out at the beginning                   |
+| Q7       | I worry about things that don't matter                       |
+| Q8       | I work or study hard                                         |
+| Q9       | Although there are some liars in the society, I think most people are still credible |
+| Q10      | I have a spirit of adventure that no one else has            |
+| Q11      | I often feel uneasy                                          |
+| Q12      | I'm always worried that something bad is going to happen     |
+| Q13      | Although there are some dark things in human society (such as war, crime, fraud), I still believe that human nature is generally good |
+| Q14      | I enjoy going to social and entertainment gatherings         |
+| Q15      | It is one of my characteristics to pay attention to logic and order in doing things |
+
+### 5.tag_map.csv
+
+Mapping relationship between the tag ID and the tag content. We add 7 additional tags that all videos contain, namely "preview 1, preview 2, preview 3, preview 4, preview 5, title, content".
+
+| Field Name:         | Description                                                  | Type    | Example                                                      |
+| :------------------ | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+| tag_id              | ID of the tag                                                | int64   | 1409                                                         |
+| tag_content         | The content corresponding to the tag                         | str     | cute baby
+
+### 6.video_map.csv
+
+Mapping relationship between the video ID and the folder name in *preview*.
+
+| Field Name:         | Description                                                  | Type    | Example                                                      |
+| :------------------ | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+| video_id            | ID of the video                                              | int64   | 1                                                            |
+| folder_name         | The folder name corresponding to the video                   | str     | 83062078
+
+### 7.preview
+
+Each video contains 5 image previews.
+
+The mapping relationship between the folder name and the video ID is in *video_map.csv*
 
 ## Library
 
@@ -135,7 +182,7 @@ python review_generate.py --model=[model name] --dataset=[dataset] --config=[con
 
 ## How to Obtain?
 
-Please provide us with your basic information including your name, institution, and purpose of use to request the dataset. You can email us at reasonerdataset@gmail.com.
+Please provide us with your basic information including your name, institution, and purpose of use to request the dataset. You can email us at <reasonerdataset@gmail.com>.
 
 ## Cite
 
@@ -150,3 +197,4 @@ Please cite the following paper as the reference if you use our code or dataset.
       archivePrefix={arXiv},
       primaryClass={cs.IR}
 }
+```
