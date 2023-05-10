@@ -30,7 +30,7 @@ You can directly download the REASONER dataset through the following three links
 
 - [![Baidu Netdisk](https://img.shields.io/badge/-Baidu%20Netdisk-lightgrey)](https://pan.baidu.com/s/1L9AzPe0MkRbMwk6yeDj4QA?pwd=ipxd)
 
-- [![OneDrive](https://img.shields.io/badge/-OneDrive-blue)]([REASONER-Dataset](https://1drv.ms/f/s!AiuzqR3lP02KbCZOY3c8bfb3ZWg?e=jWTuc1))
+- [![OneDrive](https://img.shields.io/badge/-OneDrive-blue)](https://1drv.ms/f/s!AiuzqR3lP02KbCZOY3c8bfb3ZWg?e=jWTuc1)
 
 ## Data description
 
