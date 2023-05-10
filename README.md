@@ -10,10 +10,7 @@
 REASONER is an explainable recommendation dataset with multi-aspect real user labeled ground truths. The complete labeling process for each user is shown in following figure.
 ![steps](asset/steps.png)
 In specific, we firstly develop a video recommendation platform, where a series of questions around the recommendation explainability are carefully designed. Then, we recruit about 3000 users with different backgrounds to use the system, and collect their behaviors and feedback to our questions.
-
-## Data description
-
-*REASONER* contains fifty thousand of user-item interactions as well as the side information including the video categories and user profile. Three files are included in the download data:
+The dataset contains the following files.
 
 ```plain
  REASONER-Dataset
@@ -25,28 +22,49 @@ In specific, we firstly develop a video recommendation platform, where a series 
   │   ├── tag_map.csv 
   │   ├── video_map.csv 
   │── preview
+  │── README.md
 ```
 
-### 1. Descriptions of the fields in `interaction.csv`
 
-| Field Name:  | Description                                                                    | Type    | Example                                                                 |
-| :----------- | :----------------------------------------------------------------------------- | :------ | :---------------------------------------------------------------------- |
-| user_id      | ID of the user                                                                | int64   | 0                                                                       |
-| video_id     | ID of the viewed video                                                        | int64   | 3650                                                                    |
-| like         | Whether user like the video: 0 means no, 1 means yes                           | int64   | 0                                                                       |
-| persuasiveness_tag   |The user selected tags for the question "Which tags are the reasons that you would like to watch this video?" before watching the video                        | list    | [4728,2216,2523]                                                        |
-| rating       | User rating for the video                                                     | float64 | 3.0                                                                     |
-| review       | User review for the video                                                     | str     | This animation is very interesting, my friends and I like it very much. |
-| informativeness_tag    | The user selected tags for the question "Which features are most informative for this video?" after watching the video                             | list    | [2738,1216,2223]                                                        |
-| satisfaction_tag | The user selected tags for the question "Which features are you most satisfied with?" after watching the video.                                              | list    | [738,3226,1323]                                                         |
-| watch_again  |  If the system only show the satisfaction_tag to the user, whether the she would like to watch this video? | int64   | 0                                                                       |
+
+## How to Obtain our Dataset
+
+You can directly download the REASONER dataset through the following three links:
+
+- [![Google Drive](https://img.shields.io/badge/-Google%20Drive-yellow)](https://drive.google.com/drive/folders/1dARhorIUu-ajc5ZsWiG_XY36slRX_wgL?usp=share_link)
+
+- [![Baidu Netdisk](https://img.shields.io/badge/-Baidu%20Netdisk-lightgrey)](https://pan.baidu.com/s/1L9AzPe0MkRbMwk6yeDj4QA?pwd=ipxd)
+
+- [![OneDrive](https://img.shields.io/badge/-OneDrive-blue)]([REASONER-Dataset](https://1drv.ms/f/s!AiuzqR3lP02KbCZOY3c8bfb3ZWg?e=jWTuc1))
+
+
+## Data description
+
+
+### 1. interaction.csv
+
+This file contains the user's annotation records on the video, including the following fields:
+
+| Field Name:         | Description                                                  | Type    | Example                                                      |
+| :------------------ | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
+| user_id             | ID of the user                                               | int64   | 0                                                            |
+| video_id            | ID of the viewed video                                       | int64   | 3650                                                         |
+| like                | Whether user like the video: 0 means no, 1 means yes         | int64   | 0                                                            |
+| persuasiveness_tag  | The user selected tags for the question "Which tags are the reasons that you would like to watch this video?" before watching the video | list    | [4728,2216,2523]                                             |
+| rating              | User rating for the video, the range is 1.0~5.0              | float64 | 3.0                                                          |
+| review              | User review for the video                                    | str     | This animation is very interesting, my friends and I like it very much. |
+| informativeness_tag | The user selected tags for the question "Which features are most informative for this video?" after watching the video | list    | [2738,1216,2223]                                             |
+| satisfaction_tag    | The user selected tags for the question "Which features are you most satisfied with?" after watching the video. | list    | [738,3226,1323]                                              |
+| watch_again         | If the system only show the satisfaction_tag to the user, whether the she would like to watch this video? 0 means no, 1 means yes | int64   | 0                                                            |
 
 Note that if the user chooses to like the video, the `watch_again` item has no meaning and is set to 0.
 
-### 2. Descriptions of the fields in `user.csv`
+### 2. user.csv
 
-| Field Name: | Description                                | Type  | Example             |
-| :---------- | :----------------------------------------- | :---- | :------------------ |
+This file contains user profiles.
+
+| Field Name: | Description                               | Type  | Example             |
+| :---------- | :---------------------------------------- | :---- | :------------------ |
 | user_id     | ID of the user                            | int64 | 1005                |
 | age         | User age (indicated by ID)                | int64 | 3                   |
 | gender      | User gender: 0 means female, 1 means male | int64 | 0                   |
@@ -56,10 +74,12 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 | address     | User address (indicated by ID)            | int64 | 23                  |
 | hobby       | User hobbies                              | str   | drawing and soccer. |
 
-### 3. Descriptions of the fields in `video.csv`
+### 3. video.csv
 
-| Field Name: | Description                              | Type  | Example                                   |
-| :---------- | :--------------------------------------- | :---- | :---------------------------------------- |
+This file contains information of videos.
+
+| Field Name: | Description                             | Type  | Example                                   |
+| :---------- | :-------------------------------------- | :---- | :---------------------------------------- |
 | video_id    | ID of the video                         | int64 | 1                                         |
 | title       | Title of the video                      | str   | Take it once a day to prevent depression. |
 | info        | Introduction of the video               | str   | Just like it, once a day                  |
@@ -67,9 +87,9 @@ Note that if the user chooses to like the video, the `watch_again` item has no m
 | duration    | Duration of the video in seconds        | int64 | 120                                       |
 | category    | Category of the video (indicated by ID) | int64 | 3                                         |
 
-### 4. Descriptions of the fields in `bigfive.csv`
+### 4. bigfive.csv
 
-We have the annotators take the [Big Five Personality Test](https://www.psytoolkit.org/survey-library/big5-bfi-s.html), and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. The file also includes a user_id column.
+We have the annotators take the [Big Five Personality Test](https://www.psytoolkit.org/survey-library/big5-bfi-s.html), and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. This file also includes a  `user_id` column.
 
 The questions are described as follows:
 
@@ -91,29 +111,32 @@ The questions are described as follows:
 | Q14      | I enjoy going to social and entertainment gatherings         |
 | Q15      | It is one of my characteristics to pay attention to logic and order in doing things |
 
-### 5.tag_map.csv
+### 5. tag_map.csv
 
 Mapping relationship between the tag ID and the tag content. We add 7 additional tags that all videos contain, namely "preview 1, preview 2, preview 3, preview 4, preview 5, title, content".
 
 | Field Name:         | Description                                                  | Type    | Example                                                      |
 | :------------------ | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
 | tag_id              | ID of the tag                                                | int64   | 1409                                                         |
-| tag_content         | The content corresponding to the tag                         | str     | cute baby
+| tag_content         | The content corresponding to the tag                         | str     | cute baby                                                    |
 
-### 6.video_map.csv
+### 6. video_map.csv
 
-Mapping relationship between the video ID and the folder name in *preview*.
+Mapping relationship between the video ID and the folder name in `preview`.
 
 | Field Name:         | Description                                                  | Type    | Example                                                      |
 | :------------------ | :----------------------------------------------------------- | :------ | :----------------------------------------------------------- |
 | video_id            | ID of the video                                              | int64   | 1                                                            |
-| folder_name         | The folder name corresponding to the video                   | str     | 83062078
+| folder_name         | The folder name corresponding to the video                   | str     | 83062078                                                     |
 
-### 7.preview
+### 7. preview
 
 Each video contains 5 image previews.
 
-The mapping relationship between the folder name and the video ID is in *video_map.csv*
+The mapping relationship between the folder name and the video ID is in `video_map.csv`.
+
+
+
 
 ## Library
 
@@ -180,9 +203,57 @@ Run natural language based models:
 python review_generate.py --model=[model name] --dataset=[dataset] --config=[config_files]
 ```
 
-## How to Obtain?
+### Codes for accessing our data
 
-Please provide us with your basic information including your name, institution, and purpose of use to request the dataset. You can email us at <reasonerdataset@gmail.com>.
+We provide code to read the data into data frame with *pandas*. 
+
+```python
+import pandas as pd
+
+# access interaction.csv
+interaction_df = pd.read_csv('interaction.csv', sep='\t', header=0)
+# get the first ten lines
+print(interaction_df.head(10))
+# get each column 
+# ['user_id', 'video_id', 'like', 'persuasiveness_tag', 'rating', 'review', 'informativeness_tag', 'satisfaction_tag', 'watch_again', ]
+for col in interaction_df.columns:
+	print(interaction_df[col][:10])
+
+# access user.csv
+user_df = pd.read_csv('user.csv', sep='\t', header=0)
+print(user_df.head(10))
+# ['user_id', 'age', 'gender', 'education', 'career', 'income', 'address', 'hobby']
+for col in user_df.columns:
+	print(user_df[col][:10])
+  
+# access video.csv
+video_df = pd.read_csv('video.csv', sep='\t', header=0)
+print(video_df.head(10))
+# ['video_id', 'title', 'info', 'tags', 'duration', 'category']
+for col in video_df.columns:
+	print(video_df[col][:10])
+
+# access bigfive.csv
+bigfive_df = pd.read_csv('bigfive.csv', sep='\t', header=0)
+print(bigfive_df.head(10))
+# ['user_id', 'Q1', ..., 'Q15']
+for col in bigfive_df.columns:
+	print(bigfive_df[col][:10])
+
+# access tag_map.csv
+tag_map_df = pd.read_csv('tag_map.csv', sep='\t', header=0)
+print(tag_map_df.head(10))
+# ['tag_id', 'tag_content']
+for col in tag_map_df.columns:
+	print(tag_map_df[col][:10])
+  
+# access video_map.csv
+video_map_df = pd.read_csv('video_map.csv', sep='\t', header=0)
+print(video_map_df.head(10))
+# ['video_id', 'folder_name']
+for col in video_map_df.columns:
+	print(video_map_df[col][:10])
+```
 
 ## Cite
 
