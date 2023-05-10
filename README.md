@@ -7,9 +7,24 @@
 [Library]: https://reasoner2023.github.io/docs/library
 [Paper]: https://arxiv.org/abs/2303.00168v1
 
-REASONER is an explainable recommendation dataset with multi-aspect real user labeled ground truths. The complete labeling process for each user is shown in following figure.
+**REASONER** is an explainable recommendation dataset with multi-aspect real user labeled ground truths. The complete labeling process for each user is shown in following figure.
 ![steps](asset/steps.png)
 In specific, we firstly develop a video recommendation platform, where a series of questions around the recommendation explainability are carefully designed. Then, we recruit about 3000 users with different backgrounds to use the system, and collect their behaviors and feedback to our questions.
+
+The dataset contains the following files.
+
+```plain
+ REASONER-Dataset
+  │── dataset
+  │   ├── interaction.csv
+  │   ├── user.csv
+  │   ├── video.csv
+  │   ├── bigfive.csv 
+  │   ├── tag_map.csv 
+  │   ├── video_map.csv 
+  │── preview
+  │── README.md
+```
 
 ## How to Obtain our Dataset
 
@@ -24,20 +39,7 @@ You can directly download the REASONER dataset through the following three links
 
 ## Data description
 
-*REASONER* contains fifty thousand of user-item interactions as well as the side information including the video categories and user profile. Three files are included in the download data:
 
-```plain
- REASONER-Dataset
-  │── dataset
-  │   ├── interaction.csv
-  │   ├── user.csv
-  │   ├── video.csv
-  │   ├── bigfive.csv 
-  │   ├── tag_map.csv 
-  │   ├── video_map.csv 
-  │── preview
-  │── README.md
-```
 
 ### 1. interaction.csv
 
