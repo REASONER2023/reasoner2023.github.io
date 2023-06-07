@@ -191,6 +191,8 @@ We implement several well-known explainable recommender models and list them acc
 
 Here is a quick-start example for our library. You can directly execute *tag_predict.py* or *review_generate.py* to run a feature based or natural language based model, respectively. In each of these commends, you need to specify three parameters to indicate the names of the model, dataset and configuration file, respectively.
 
+We randomly split the interaction records of each user into training, validation, and test sets according to the ratio of 8:1:1. And the divided datasets can be obtained through [Google Drive](https://drive.google.com/file/d/10z_jRG8OVjd1QDszGiaPyjD4jIy_Fb6m/view?usp=sharing). 
+
 Run feature based models:
 
 ```bash
