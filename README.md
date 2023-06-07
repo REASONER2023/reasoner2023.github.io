@@ -257,6 +257,9 @@ for col in video_map_df.columns:
 	print(video_map_df[col][:10])
 ```
 
+## License
+Our licensing for the dataset is under a CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial 4.0), with the additional terms included herein. See official instructions [here](https://creativecommons.org/licenses/by-nc/4.0/).
+
 ## Cite
 
 Please cite the following paper as the reference if you use our code or dataset.[![LINK](https://img.shields.io/badge/-Paper%20Link-lightgrey)](https://arxiv.org/abs/2303.00168) [![PDF](https://img.shields.io/badge/-PDF-red)](https://arxiv.org/pdf/2303.00168.pdf)
