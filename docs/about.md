@@ -14,8 +14,7 @@ We sincerely thank the contributions of Zhenlei Wang, Rui Zhou, Kun Lin, Zeyu Zh
 
 ## License
 
-Our licensing for the dataset is under a CC BY-NC 4.0 (Creative Commons Attribution-
-14 NonCommercial 4.0), with the additional terms included herein. See official instructions [here](https://creativecommons.org/licenses/by-nc/4.0/).
+Our licensing for the dataset is under a CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial 4.0), with the additional terms included herein. See official instructions [here](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## Cite
 
