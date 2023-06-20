@@ -124,6 +124,8 @@ The questions are described as follows:
 | Q15      | It is one of my characteristics to pay attention to logic and order in doing things |
 
 We refer users to [[1]](https://www.xinlixue.cn/web/xinliliangbiao/rengeliangbiao/2020-04-01/849.html) and [[2]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0221621) for more details.
+[1] 中国大五人格问卷极简版（CBF-PI-15）
+[2] Zhang, X., Wang, M-C, Luo, J., He, L. (under review). The development and psychometrics evaluation of a very shorten version of the Chinese Big five personality inventory. PLoS ONE.
 
 ### 5. tag_map.csv
 
