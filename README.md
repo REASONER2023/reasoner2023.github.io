@@ -25,8 +25,6 @@ The dataset contains the following files.
   │── README.md
 ```
 
-
-
 ## How to Obtain our Dataset
 
 You can directly download the REASONER dataset through the following three links:
@@ -37,9 +35,7 @@ You can directly download the REASONER dataset through the following three links
 
 - [![OneDrive](https://img.shields.io/badge/-OneDrive-blue)](https://1drv.ms/f/s!AiuzqR3lP02KbCZOY3c8bfb3ZWg?e=jWTuc1)
 
-
 ## Data description
-
 
 ### 1. interaction.csv
 
@@ -89,7 +85,22 @@ This file contains information of videos.
 
 ### 4. bigfive.csv
 
-We have the annotators take the [Big Five Personality Test](https://www.psytoolkit.org/survey-library/big5-bfi-s.html), and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. This file also includes a  `user_id` column.
+We administered the *Big Five Personality Test* to the annotators, and their responses to 15 questions, along with a `user_id` column, are stored in the `bigfive.csv` file. The CBF-PI-15 scale utilizes a Likert six-point scoring system with the following score interpretations:
+
+- 0: Completely Not Applicable
+- 1: Mostly Not Applicable
+- 2: Somewhat Not Applicable
+- 3: Somewhat Applicable
+- 4: Mostly Applicable
+- 5: Completely Applicable
+
+In this scale, questions 2 and 5 are reverse-scored. The dimensions and corresponding items are as follows:
+
+- Neuroticism Dimension (Items 7, 11, and 12)
+- Conscientiousness Dimension (Items 6, 8, and 15)
+- Agreeableness Dimension (Items 1, 9, and 13)
+- Openness Dimension (Items 3, 4, and 10)
+- Extraversion Dimension (Items 2, 5, and 14)
 
 The questions are described as follows:
 
@@ -134,9 +145,6 @@ Mapping relationship between the video ID and the folder name in `preview`.
 Each video contains 5 image previews.
 
 The mapping relationship between the folder name and the video ID is in `video_map.csv`.
-
-
-
 
 ## Library
 
@@ -205,7 +213,7 @@ python review_generate.py --model=[model name] --dataset=[dataset] --config=[con
 
 ### Codes for accessing our data
 
-We provide code to read the data into data frame with *pandas*. 
+We provide code to read the data into data frame with *pandas*.
 
 ```python
 import pandas as pd
@@ -217,43 +225,47 @@ print(interaction_df.head(10))
 # get each column 
 # ['user_id', 'video_id', 'like', 'persuasiveness_tag', 'rating', 'review', 'informativeness_tag', 'satisfaction_tag', 'watch_again', ]
 for col in interaction_df.columns:
-	print(interaction_df[col][:10])
+ print(interaction_df[col][:10])
 
 # access user.csv
 user_df = pd.read_csv('user.csv', sep='\t', header=0)
 print(user_df.head(10))
 # ['user_id', 'age', 'gender', 'education', 'career', 'income', 'address', 'hobby']
 for col in user_df.columns:
-	print(user_df[col][:10])
+ print(user_df[col][:10])
   
 # access video.csv
 video_df = pd.read_csv('video.csv', sep='\t', header=0)
 print(video_df.head(10))
 # ['video_id', 'title', 'info', 'tags', 'duration', 'category']
 for col in video_df.columns:
-	print(video_df[col][:10])
+ print(video_df[col][:10])
 
 # access bigfive.csv
 bigfive_df = pd.read_csv('bigfive.csv', sep='\t', header=0)
 print(bigfive_df.head(10))
 # ['user_id', 'Q1', ..., 'Q15']
 for col in bigfive_df.columns:
-	print(bigfive_df[col][:10])
+ print(bigfive_df[col][:10])
 
 # access tag_map.csv
 tag_map_df = pd.read_csv('tag_map.csv', sep='\t', header=0)
 print(tag_map_df.head(10))
 # ['tag_id', 'tag_content']
 for col in tag_map_df.columns:
-	print(tag_map_df[col][:10])
+ print(tag_map_df[col][:10])
   
 # access video_map.csv
 video_map_df = pd.read_csv('video_map.csv', sep='\t', header=0)
 print(video_map_df.head(10))
 # ['video_id', 'folder_name']
 for col in video_map_df.columns:
-	print(video_map_df[col][:10])
+ print(video_map_df[col][:10])
 ```
+
+## License
+
+Our licensing for the dataset is under a CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial 4.0), with the additional terms included herein. See official instructions [here](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## Cite
 

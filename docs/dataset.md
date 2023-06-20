@@ -82,7 +82,22 @@ This file contains information of videos.
 
 ### 4. bigfive.csv
 
-We have the annotators take the [Big Five Personality Test](https://www.psytoolkit.org/survey-library/big5-bfi-s.html), and `bigfive.csv` contains the answers of the annotators to 15 questions, where [0, 1, 2, 3, 4, 5] correspond to [strongly disagree, disagree, somewhat disagree, somewhat agree, agree, strongly agree]. This file also includes a  `user_id` column.
+We administered the *Big Five Personality Test* to the annotators, and their responses to 15 questions, along with a `user_id` column, are stored in the `bigfive.csv` file. The CBF-PI-15 scale utilizes a Likert six-point scoring system with the following score interpretations:
+
+- 0: Completely Not Applicable
+- 1: Mostly Not Applicable
+- 2: Somewhat Not Applicable
+- 3: Somewhat Applicable
+- 4: Mostly Applicable
+- 5: Completely Applicable
+
+In this scale, questions 2 and 5 are reverse-scored. The dimensions and corresponding items are as follows:
+
+- Neuroticism Dimension (Items 7, 11, and 12)
+- Conscientiousness Dimension (Items 6, 8, and 15)
+- Agreeableness Dimension (Items 1, 9, and 13)
+- Openness Dimension (Items 3, 4, and 10)
+- Extraversion Dimension (Items 2, 5, and 14)
 
 The questions are described as follows:
 
