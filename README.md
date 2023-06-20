@@ -86,7 +86,7 @@ This file contains information of videos.
 
 ### 4. bigfive.csv
 
-We administered the *Big Five Personality Test* to the annotators, and their responses to 15 questions, along with a `user_id` column, are stored in the `bigfive.csv` file. The CBF-PI-15 scale utilizes a Likert six-point scoring system with the following score interpretations:
+We administered the Big Five Personality Test based on CBF-PI-15 to the annotators, and their responses to 15 questions, along with a `user_id` column, are stored in the `bigfive.csv` file. The CBF-PI-15 scale utilizes a Likert six-point scoring system with the following score interpretations:
 
 - 0: Completely Not Applicable
 - 1: Mostly Not Applicable
@@ -122,6 +122,8 @@ The questions are described as follows:
 | Q13      | Although there are some dark things in human society (such as war, crime, fraud), I still believe that human nature is generally good |
 | Q14      | I enjoy going to social and entertainment gatherings         |
 | Q15      | It is one of my characteristics to pay attention to logic and order in doing things |
+
+We refer users to [[1]](https://www.xinlixue.cn/web/xinliliangbiao/rengeliangbiao/2020-04-01/849.html) and [[2]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0221621) for more details.
 
 ### 5. tag_map.csv
 
