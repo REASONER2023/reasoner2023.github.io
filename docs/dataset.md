@@ -82,7 +82,7 @@ This file contains information of videos.
 
 ### 4. bigfive.csv
 
-We administered the *Big Five Personality Test* to the annotators, and their responses to 15 questions, along with a `user_id` column, are stored in the `bigfive.csv` file. The CBF-PI-15 scale utilizes a Likert six-point scoring system with the following score interpretations:
+We administered the Big Five Personality Test based on CBF-PI-15 to the annotators, and their responses to 15 questions, along with a `user_id` column, are stored in the `bigfive.csv` file. The CBF-PI-15 scale utilizes a Likert six-point scoring system with the following score interpretations:
 
 - 0: Completely Not Applicable
 - 1: Mostly Not Applicable
@@ -122,6 +122,7 @@ The questions are described as follows:
 We refer the users to [1] and [2] for more details about the Big Five Personality Test.
 
 [1] <https://www.xinlixue.cn/web/xinliliangbiao/rengeliangbiao/2020-04-01/849.html>
+
 [2] Zhang, X., Wang, M-C, Luo, J., He, L. The development and psychometrics evaluation of a very shorten version of the Chinese Big five personality inventory. PLoS ONE.
 
 ### 5. tag_map.csv
