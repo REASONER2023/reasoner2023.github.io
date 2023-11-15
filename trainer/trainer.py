@@ -188,14 +188,14 @@ class Trainer(object):
         # reason_tag
         reason_p, reason_r, reason_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_reason_tag,
                                                                      reason_predict)
-        reason_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, reason_predict)
+        reason_ndcg = evaluate_ndcg(self.top_k, data.positive_reason_tag, reason_predict)
         # video_tag
         video_p, video_r, video_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_video_tag, video_predict)
         video_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, video_predict)
         # interest_tag
         interest_p, interest_r, interest_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_interest_tag,
                                                                            interest_predict)
-        interest_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, interest_predict)
+        interest_ndcg = evaluate_ndcg(self.top_k, data.positive_interest_tag, interest_predict)
 
         return RMSE, MAE, \
                reason_p, reason_r, reason_f1, reason_ndcg, \
@@ -357,14 +357,14 @@ class LRPPMTrainer(Trainer):
         # reason_tag
         reason_p, reason_r, reason_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_reason_tag,
                                                                      reason_predict)
-        reason_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, reason_predict)
+        reason_ndcg = evaluate_ndcg(self.top_k, data.positive_reason_tag, reason_predict)
         # video_tag
         video_p, video_r, video_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_video_tag, video_predict)
         video_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, video_predict)
         # interest_tag
         interest_p, interest_r, interest_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_interest_tag,
                                                                            interest_predict)
-        interest_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, interest_predict)
+        interest_ndcg = evaluate_ndcg(self.top_k, data.positive_interest_tag, interest_predict)
 
         return RMSE, MAE, \
                reason_p, reason_r, reason_f1, reason_ndcg, \
@@ -668,14 +668,14 @@ class MTERTrainer(Trainer):
         # reason_tag
         reason_p, reason_r, reason_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_reason_tag,
                                                                      reason_predict)
-        reason_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, reason_predict)
+        reason_ndcg = evaluate_ndcg(self.top_k, data.positive_reason_tag, reason_predict)
         # video_tag
         video_p, video_r, video_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_video_tag, video_predict)
         video_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, video_predict)
         # interest_tag
         interest_p, interest_r, interest_f1 = evaluate_precision_recall_f1(self.top_k, data.positive_interest_tag,
                                                                            interest_predict)
-        interest_ndcg = evaluate_ndcg(self.top_k, data.positive_video_tag, interest_predict)
+        interest_ndcg = evaluate_ndcg(self.top_k, data.positive_interest_tag, interest_predict)
 
         return RMSE, MAE, \
                reason_p, reason_r, reason_f1, reason_ndcg, \
